@@ -1,8 +1,9 @@
 ﻿AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: >-
-  A simple backend (read/write to DynamoDB) with a RESTful API endpoint using
-  Amazon API Gateway.
+  É a função responsável por inserir as rotas das pessoas que estão com
+  passagens marcadas, também é responsável por verificar a origem e o destino
+  para então localizar cargas que farão o mesmo trajeto.
 Resources:
   travel:
     Type: 'AWS::Serverless::Function'
@@ -11,8 +12,9 @@ Resources:
       Runtime: nodejs8.10
       CodeUri: .
       Description: >-
-        A simple backend (read/write to DynamoDB) with a RESTful API endpoint
-        using Amazon API Gateway.
+        É a função responsável por inserir as rotas das pessoas que estão com
+        passagens marcadas, também é responsável por verificar a origem e o
+        destino para então localizar cargas que farão o mesmo trajeto.
       MemorySize: 512
       Timeout: 10
       Role: 'arn:aws:iam::564384903856:role/service-role/travel'

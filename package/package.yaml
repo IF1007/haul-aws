@@ -1,8 +1,10 @@
 ﻿AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: >-
-  A simple backend (read/write to DynamoDB) with a RESTful API endpoint using
-  Amazon API Gateway.
+  Esta função é responsável pelo cadastro do pacote que será transportado, e
+  conterá informações como origem, destino, peso, volume, valor, entre outros.
+  Ela também será responsável por encontrar os passageiros que farão o mesmo
+  percusso
 Resources:
   package:
     Type: 'AWS::Serverless::Function'
@@ -11,8 +13,10 @@ Resources:
       Runtime: nodejs8.10
       CodeUri: .
       Description: >-
-        A simple backend (read/write to DynamoDB) with a RESTful API endpoint
-        using Amazon API Gateway.
+        Esta função é responsável pelo cadastro do pacote que será transportado,
+        e conterá informações como origem, destino, peso, volume, valor, entre
+        outros. Ela também será responsável por encontrar os passageiros que
+        farão o mesmo percusso
       MemorySize: 512
       Timeout: 10
       Role: 'arn:aws:iam::564384903856:role/service-role/package'

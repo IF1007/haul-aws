@@ -1,8 +1,8 @@
 ﻿AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: >-
-  A simple backend (read/write to DynamoDB) with a RESTful API endpoint using
-  Amazon API Gateway.
+  Função responsável por listar os aeroportos de origem e de destino para então
+  salvar as rotas
 Resources:
   airport:
     Type: 'AWS::Serverless::Function'
@@ -11,8 +11,8 @@ Resources:
       Runtime: nodejs8.10
       CodeUri: .
       Description: >-
-        A simple backend (read/write to DynamoDB) with a RESTful API endpoint
-        using Amazon API Gateway.
+        Função responsável por listar os aeroportos de origem e de destino para
+        então salvar as rotas
       MemorySize: 512
       Timeout: 10
       Role: 'arn:aws:iam::564384903856:role/service-role/airport'
